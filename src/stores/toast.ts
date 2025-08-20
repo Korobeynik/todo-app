@@ -2,7 +2,7 @@ import { ref } from 'vue'
 
 const message = ref('')
 const isVisible = ref(false)
-let timeout: number | null = null
+let timeout: ReturnType<typeof setTimeout> | null = null
 
 const showToast = (text: string) => {
   if (timeout) {
